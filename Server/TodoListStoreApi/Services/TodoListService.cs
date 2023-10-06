@@ -25,16 +25,16 @@ using MongoDB.Driver;
             public async Task<List<TaskEntity>> GetAsync() =>
                 await _todoListCollecion.Find(_ => true).ToListAsync();
             
-            public async Task<TaskEntity?> GetAsync(ObjectId id) =>
+            public async Task<TaskEntity?> GetAsync(string id) =>
                 await _todoListCollecion.Find(x => x.Id == id).FirstOrDefaultAsync();
             
             public async Task CreateAsync(TaskEntity newTask) =>
                 await _todoListCollecion.InsertOneAsync(newTask);
             
-            public async Task UpdateAsync(ObjectId id, TaskEntity updatedTask) =>
+            public async Task UpdateAsync(string id, TaskEntity updatedTask) =>
                 await _todoListCollecion.ReplaceOneAsync(x => x.Id == id, updatedTask);
             
-            public async Task RemoveAsync(ObjectId id) =>
+            public async Task RemoveAsync(string id) =>
                 await _todoListCollecion.DeleteOneAsync(x => x.Id == id);
         }
     }

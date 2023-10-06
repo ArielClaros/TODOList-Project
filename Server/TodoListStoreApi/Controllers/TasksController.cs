@@ -23,7 +23,7 @@ namespace TodoListStoreApi.Controllers
             await _todoListService.GetAsync();
 
         [HttpGet("{id:length(24)}")]
-        public async Task<ActionResult<TaskEntity>> Get(ObjectId id)
+        public async Task<ActionResult<TaskEntity>> Get(string id)
         {
             var task = await _todoListService.GetAsync(id);
 
@@ -44,7 +44,7 @@ namespace TodoListStoreApi.Controllers
         }
 
         [HttpPut("{id:length(24)}")]
-        public async Task<IActionResult> Update(ObjectId id, TaskEntity updatedTask)
+        public async Task<IActionResult> Update(string id, TaskEntity updatedTask)
         {
             var task = await _todoListService.GetAsync(id);
 
@@ -61,7 +61,7 @@ namespace TodoListStoreApi.Controllers
         }
 
         [HttpDelete("{id:length(24)}")]
-        public async Task<IActionResult> Delete(ObjectId id)
+        public async Task<IActionResult> Delete(string id)
         {
             var task = await _todoListService.GetAsync(id);
 

@@ -2,6 +2,14 @@ using TodoListStoreApi.Models;
 using TodoListStoreApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReactApp",
+        builder => builder
+            .WithOrigins("http://localhost:3000") // Reemplaza con la URL de tu aplicación de React
+            .AllowAnyHeader()
+            .AllowAnyMethod());
+});
 
 // Add services to the container.
 builder.Services.Configure<TodoListStoreDatabaseSettings>(
@@ -22,6 +30,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("AllowReactApp");
 
 app.UseHttpsRedirection();
 
