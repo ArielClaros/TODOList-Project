@@ -13,7 +13,7 @@ function TaskList() {
 
     useEffect(() => {
         axios
-            .get("http://localhost:5162/api/Tasks")
+            .get("https://todolist-dsw.azurewebsites.net/api/Tasks")
             .then((response) => {
                 setTasks(response.data);
             })
@@ -24,7 +24,7 @@ function TaskList() {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:5162/api/Tasks/${id}`);
+            await axios.delete(`https://todolist-dsw.azurewebsites.net/api/Tasks/${id}`);
             setTasks(tasks.filter((task) => task.id !== id));
         } catch (error) {
             console.error("Error al eliminar la tarea:", error);
@@ -34,7 +34,7 @@ function TaskList() {
     const handleSave = async () => {
         try {
             const response = await axios.post(
-                "http://localhost:5162/api/Tasks",
+                "https://todolist-dsw.azurewebsites.net/api/Tasks",
                 newTask
             );
             setTasks([...tasks, response.data]);
@@ -52,7 +52,7 @@ function TaskList() {
 
     const handleUpdate = async () => {
         try {
-            await axios.put(`http://localhost:5162/api/Tasks/${editingTask.id}`, newTask);
+            await axios.put(`https://todolist-dsw.azurewebsites.net/api/Tasks/${editingTask.id}`, newTask);
             const updatedTasks = tasks.map(task => task.id === editingTask.id ? newTask : task);
             setTasks(updatedTasks);
             setShowPopup(false);

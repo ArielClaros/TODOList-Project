@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ACB6cddsvWoIIafy3LhWx+fDSxmkmW2O6bbZcdglNPQ=",
+  "Source": "TodoListStoreApi",
+  "BasePath": "_content/TodoListStoreApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/035159ed-d5df-46dc-865a-7403f4251ab5/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/TODO-List-DSW",
+    "appService.deploySubpath": "Server/TodoListStoreApi/bin/Publish"
+}
