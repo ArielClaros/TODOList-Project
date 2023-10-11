@@ -1,0 +1,99 @@
+.task-list-container {
+    max-width: 600px; /* Establece un ancho máximo para el contenedor */
+    margin: 0 auto; /* Centra el contenedor en la página */
+    
+}
+
+.task-item {
+    display: flex; /* Usa flexbox para cambiar el diseño */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+    margin-bottom: 5px;
+    background-color: #fff;
+    border: 1px solid #00C2D6;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.task-details {
+    flex-grow: 1; /* Hace que este elemento crezca para ocupar el espacio disponible */
+}
+
+.item-button button {
+    background-color: #FFE9ED;
+    border: none;
+    color: black;
+    padding: 8px 16px; /* Ajusta el relleno según tus preferencias */
+    border-radius: 4px; /* Ajusta los bordes según tus preferencias */
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.item-button-more button {
+    background-color: #FFE9ED;
+    border: none;
+    color: black;
+    padding: 8px 16px; /* Ajusta el relleno según tus preferencias */
+    border-radius: 4px; /* Ajusta los bordes según tus preferencias */
+    cursor: pointer;
+    margin-left: 45%;
+}
+
+.item-button button:hover {
+    background-color: #FED5DB; /* Cambia el color cuando el botón está en hover (opcional) */
+}
+
+.item-button-more button:hover {
+    background-color: #FED5DB; /* Cambia el color cuando el botón está en hover (opcional) */
+}
+
+.todo-list {
+    height: 1000px;
+    background-color: #fff;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #effdff;
+    padding: 20px;
+    border: 16px solid #00C2D6;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 8px;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+}
+
+.popup input {
+    width: 94%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #00C2D6;
+    border-radius: 8px;
+}
+
+.popup input {
+    width: 94%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #00C2D6;
+    border-radius: 8px;
+}
+
+.popup button {
+    background-color: #BCF9FF;
+    border: none;
+    color: black;
+    padding: 8px 16px; /* Ajusta el relleno según tus preferencias */
+    border-radius: 4px; /* Ajusta los bordes según tus preferencias */
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.popup button:hover {
+    background-color: #00C2D6; /* Cambia el color cuando el botón está en hover (opcional) */
+}
